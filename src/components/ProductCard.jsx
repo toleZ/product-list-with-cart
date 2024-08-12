@@ -1,7 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 import addIconURL from "../assets/images/icon-add-to-cart.svg";
-import decrementIconURL from "../assets/images/icon-decrement-quantity.svg";
-import incrementIconURL from "../assets/images/icon-increment-quantity.svg";
 import { addProduct, removeProduct } from "../redux/feactures/cartSlice";
 
 const ProductCard = ({ cardData }) => {
@@ -40,17 +38,35 @@ const ProductCard = ({ cardData }) => {
           ) : (
             <div className="absolute -bottom-10 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-around gap-8 py-2 px-6 bg-brand-red rounded-full font-semibold text-brand-rose-50">
               <button
-                className="fill-brand-rose-50 hover:fill-brand-red transition-all duration-300"
+                className="text-brand-rose-50 hover:text-brand-red hover:bg-brand-rose-50 p-1 border-[1px] border-brand-rose-50 rounded-full transition-all duration-300"
                 onClick={handleRemoveProduct}
               >
-                <img src={decrementIconURL} alt="decrement" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="10"
+                  fill="none"
+                  viewBox="0 0 10 2"
+                >
+                  <path d="M0 .375h10v1.25H0V.375Z" fill="currentColor" />
+                </svg>
               </button>
               <span>{product.quantity}</span>
               <button
-                className="fill-brand-rose-50 hover:fill-brand-red transition-all duration-300"
+                className="text-brand-rose-50 hover:text-brand-red hover:bg-brand-rose-50 p-1 border-[1px] border-brand-rose-50 rounded-full transition-all duration-300"
                 onClick={handleAddProduct}
               >
-                <img src={incrementIconURL} alt="increment" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                >
+                  <path
+                    d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z"
+                    fill="currentColor"
+                  />
+                </svg>
               </button>
             </div>
           )}
