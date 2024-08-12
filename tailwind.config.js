@@ -4,7 +4,7 @@ export default {
   theme: {
     fontFamily: { sans: ["Red Hat Text", "ui-sans-serif"] },
     screens: {
-      mobile: "375px",
+      mobile: { min: "0px", max: "375px" },
     },
     extend: {
       fontFamily: {

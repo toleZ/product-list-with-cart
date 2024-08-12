@@ -7,7 +7,7 @@ const AsideCart = ({ onConfirmOrder }) => {
   const cartItems = cart.products;
 
   return (
-    <aside className="w-full h-fit p-8 bg-white rounded-xl text-sm">
+    <aside className="w-full mobile:w-auto h-fit p-8 bg-white rounded-xl text-sm">
       <header>
         <p className="mb-4 text-2xl text-brand-red font-bold">
           Your cart ({cart.totalQuantity})
@@ -42,7 +42,7 @@ const AsideCart = ({ onConfirmOrder }) => {
             </div>
 
             <button
-              className="w-full my-6 p-3 text-center bg-brand-red hover:bg-[#952C0C] rounded-full text-brand-rose-50 font-semibold transition-all duration-300"
+              className="w-full mt-6 p-3 text-center bg-brand-red hover:bg-[#952C0C] rounded-full text-brand-rose-50 font-semibold transition-all duration-300"
               onClick={onConfirmOrder}
             >
               Confirm Order

@@ -29,14 +29,14 @@ const ProductCard = ({ cardData }) => {
           />
           {!product ? (
             <button
-              className="absolute -bottom-10 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center gap-2 py-2 px-6 bg-white border-2 border-brand-rose-300 hover:border-brand-red rounded-full font-semibold hover:text-brand-red transition-all duration-300"
+              className="absolute -bottom-10 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center gap-2 w-3/4 p-3 bg-white border-2 border-brand-rose-300 hover:border-brand-red rounded-full font-semibold hover:text-brand-red transition-all duration-300"
               onClick={handleAddProduct}
             >
               <img src={addIconURL} alt="Add to cart" />
               <p>Add to cart</p>
             </button>
           ) : (
-            <div className="absolute -bottom-10 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-around gap-8 py-2 px-6 bg-brand-red rounded-full font-semibold text-brand-rose-50">
+            <div className="absolute -bottom-10 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-around gap-8 w-3/4 p-3 bg-brand-red rounded-full font-semibold text-brand-rose-50">
               <button
                 className="text-brand-rose-50 hover:text-brand-red hover:bg-brand-rose-50 p-1 border-[1px] border-brand-rose-50 rounded-full transition-all duration-300"
                 onClick={handleRemoveProduct}

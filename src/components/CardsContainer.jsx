@@ -21,7 +21,7 @@ const CardsContainer = () => {
   }, []);
 
   return (
-    <section className="grid grid-cols-3 gap-6">
+    <section className="grid grid-cols-3 mobile:grid-cols-1 gap-6">
       {data?.map((cardData) => (
         <ProductCard key={uuidv4()} cardData={cardData} />
       ))}

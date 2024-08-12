@@ -26,7 +26,7 @@ const App = () => {
         />
         <OrderModal show={showOrderModal} handleShow={handleShow} />
       </>
-      <main className="p-14 grid grid-cols-4 gap-6">
+      <main className="p-14 mobile:p-6 grid grid-cols-4 mobile:flex mobile:flex-col mobile:items-center gap-6">
         <section className="col-span-3">
           <span className="block pb-6 text-3xl font-extrabold">Desserts</span>
           <CardsContainer />
