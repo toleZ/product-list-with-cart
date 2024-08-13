@@ -13,7 +13,7 @@ const OrderModal = ({ show, handleShow }) => {
 
   return (
     <div
-      className={`fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10 max-h-[75vh] w-[40%] overflow-auto p-6 bg-white rounded-xl shadow-md ${
+      className={`fixed top-1/2 mobile:top-auto left-1/2 mobile:left-0 mobile:bottom-0 -translate-y-1/2 mobile:translate-y-0 -translate-x-1/2 mobile:translate-x-0 z-10 max-h-[75vh] w-[40%] mobile:w-full overflow-auto p-6 bg-white rounded-xl shadow-md ${
         show ? "scale-100" : "scale-0"
       } transition-all duration-300 delay-200`}
     >
